@@ -5,6 +5,8 @@
 #                                                                        #
 #                                                                 ########
 
+# Set GB Qwerty keyboard layout
+setxkbmap gb
 
 # Remember to replace the Windows key with a custom-made key of your preference (or use a sticker, if you are a pussy)
 set $mod Mod4
@@ -16,7 +18,7 @@ font pango:System San Francisco Display 10
 floating_modifier $mod
 
 # start a terminal (Using mate because I'm too bad for xterm or anything like that)
-bindsym $mod+Return exec mate-terminal
+bindsym $mod+Return exec gnome-terminal
 
 # kill focused window, or the alt+f4 for pros
 bindsym $mod+Shift+q kill
@@ -140,8 +142,8 @@ bindsym $mod+Shift+0 move container to workspace $workspace10
 bindsym Print exec xfce4-screenshooter --region -i
 
 # Vokoscreen for video recording. But it's shit. Don't use it.
-bindsym Shift+Print exec vokoscreen
-for_window [class="vokoscreen"] floating enable
+#bindsym Shift+Print exec vokoscreen
+#for_window [class="vokoscreen"] floating enable
 
 # Setting each workspace icon for ricing purposes. You will need awesomefont for it to work, otherwise enjoy the random squares which may or may not have letters and numbers inside!
 set $workspace1 "1 "
@@ -196,7 +198,8 @@ bar {
     colors {
     background #282B34
     }
-    status_command i3blocks -c ~/Temple-of-Edfu/.config/i3/i3blocks/config
+    status_command i3blocks -c /home/fish
+    /Temple-of-Edfu/.config/i3/i3blocks/config
 }
 
 #####
@@ -230,12 +233,10 @@ workspace $workspace5 output DVI-I-1
 #   Autoexecs - Because launching stuff at startup is FUN!
 #
 exec i3-msg 'workspace $workspace1; exec chromium'
-exec i3-msg 'workspace $workspace2; exec mate-terminal'
-exec i3-msg 'workspace $workspace9; exec enpass'
-exec discord-canary
-exec sleep 10 && steam
-exec atom
-exec hexchat
+exec i3-msg 'workspace $workspace2; exec gnome-terminal'
+exec i3-msg 'workspace $workspace3; exec discord-canary'
+exec i3-msg 'workspace $workspace4; exec atom'
+exec i3-msg 'workspace $workspace9; exec spotify'
 exec blueman-applet
 exec xset -dpms
 exec xset s off
@@ -244,9 +245,7 @@ exec --no-startup-id compton -cCGb --backend glx --vsync opengl
 #force windows to start in a specific workspace
 
 assign [class="TeamSpeak 3"] $workspace7
-assign [class="discord"] $workspace8
+assign [class="discord"] $workspace3
 assign [class="Hexchat"] $workspace7
-assign [class="Steam"] $workspace3
-assign [class="Atom"] $workspace2
-
-
+assign [class="Steam"] $workspace5
+assign [class="Atom"] $workspace4
