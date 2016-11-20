@@ -1,0 +1,13 @@
+[9:24 PM] Kurolox: How does it look?
+[9:24 PM] Kurolox: Send me a screenshot
+[9:28 PM] Kurolox: Well, I'm going to sleep. If the stuff from the top right is missing, check that you have installed i3blocks
+[9:29 PM] Kurolox: also check at the part of the config that says i3 Bar, and there should be a line that looks like this
+[9:29 PM] Kurolox: status_command i3blocks -c ~/Temple-of-Edfu/.config/i3/i3blocks/config
+[9:29 PM] Kurolox: you change that route to where you have the i3blocks stuff, it should be ~/.config/i3/i3blocks/config(edited)
+[9:30 PM] Kurolox: Also each part of the bar might need their own dependencies. Check them by clicking in the ones you will use. The dependencies are commented. https://github.com/Kurolox/Temple-of-Edfu/tree/master/.config/i3/i3blocks/blocks
+GitHub
+Kurolox/Temple-of-Edfu
+Temple-of-Edfu - The home of Horus (You get it? Because horus is my hostname and... Nevermind.) Dotfiles, wallpapers, and all sort of stuff n' ricing for my desktop. Use it if you want.
+
+[9:30 PM] Kurolox: See you and good luck
+[9:31 PM] Kurolox: @Subar al'asmak
